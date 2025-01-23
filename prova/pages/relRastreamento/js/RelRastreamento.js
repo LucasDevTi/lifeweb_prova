@@ -34,7 +34,7 @@ Cmp.RelRastreamento = function() {
                     }, {
                         text: 'Data',
                         field: 'data',
-                        width: 150
+                        width: 250
                     }, {
                         text: 'Vel. Max.',
                         field: 'vel_maxima',
@@ -71,7 +71,15 @@ Cmp.RelRastreamento = function() {
                 success: function(res) {
                     Cmp.hideLoading();
                     if(res.status == 'success') {
-                        Cmp.get('gridDadosRastreamentos').loadData(res.data);
+                        const formattedData = $.map(res.data, function(item) {
+                            return {
+                                ...item,
+                                diferenca_velocidade: item.diferenca_velocidade + '%'
+                            };
+                        });
+
+                        console.log(formattedData);
+                        Cmp.get('gridDadosRastreamentos').loadData(formattedData);
                     } else {
                         Cmp.showErrorMessage(res.message || 'Ocorreu um erro na requisição');
                     }

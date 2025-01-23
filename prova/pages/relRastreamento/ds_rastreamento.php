@@ -14,7 +14,7 @@ if($db->connect()) {
         "SELECT 
             v.placa AS placa,
             f.nome AS funcionario,
-            r.data_ocorrencia AS data,
+            DATE_FORMAT(data_ocorrencia, '%d/%m/%Y: %H:%i:%s') AS data, 
             v.vel_maxima AS vel_maxima,
             r.vel_registrada AS vel_registrada,
             ROUND(((r.vel_registrada - v.vel_maxima) / v.vel_maxima) * 100) AS diferenca_velocidade,
