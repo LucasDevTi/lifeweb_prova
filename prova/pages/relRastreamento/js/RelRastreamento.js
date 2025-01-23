@@ -29,13 +29,33 @@ Cmp.RelRastreamento = function() {
                         field: 'placa'
                     }, {
                         text: 'Funcionário',
-                        field: 'Funcionário',
+                        field: 'funcionario',
+                        width: 150
+                    }, {
+                        text: 'Data',
+                        field: 'data',
                         width: 150
                     }, {
                         text: 'Vel. Max.',
                         field: 'vel_maxima',
                         width: 150
-                    }
+                    }, {
+                        text: 'Vel. Reg.',
+                        field: 'vel_registrada',
+                        width: 150
+                    }, {
+                        text: 'Diff. Vel.',
+                        field: 'diferenca_velocidade',
+                        width: 150
+                    }, {
+                        text: 'Latitude',
+                        field: 'latitude',
+                        width: 150
+                    }, {
+                        text: 'Longitude',
+                        field: 'longitude',
+                        width: 150
+                    },
                 ]
             });
         },
