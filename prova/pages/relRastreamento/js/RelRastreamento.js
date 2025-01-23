@@ -11,9 +11,25 @@ Cmp.RelRastreamento = function() {
                 width: '200px'
             });
 
+            // Área de pesquisa 2
+            Cmp.createInput({
+                id: 'inputFuncionario',
+                renderTo: '#divInputFuncionario',
+                label: 'Funcionário',
+                width: '200px'
+            });
+
+            // Área de pesquisa 3
+            Cmp.createInput({
+                id: 'inputData',
+                renderTo: '#divInputData',
+                label: 'Data do registro',
+                width: '200px'
+            });
+
             Cmp.createButton({
                 id: 'btnBuscar',
-                renderTo: '#divBtnConsultar',
+                renderTo: '#divBtnConsultar3',
                 text: 'Buscar',
                 handler: function() {
                     private.buscar();
@@ -66,7 +82,9 @@ Cmp.RelRastreamento = function() {
             Cmp.request({
                 url: 'index.php?mdl=relRastreamento&file=ds_rastreamento.php',
                 params: {
-                    placa: Cmp.get('inputPlaca').getValue()
+                    placa: Cmp.get('inputPlaca').getValue(),
+                    funcionario: Cmp.get('inputFuncionario').getValue(),
+                    data: Cmp.get('inputData').getValue()
                 },
                 success: function(res) {
                     Cmp.hideLoading();

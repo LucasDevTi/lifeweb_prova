@@ -1,8 +1,21 @@
 <div class="row">
-    <div class="col-12">
-        <div class="jumbotron">
-            <div id="divInputPlaca"></div>
-            <div id="divBtnConsultar"></div>
+    <div class="col-12 ">
+        <div class="jumbotron col-12 d-flex">
+            <div class="areaPesquisas d-flex">
+                <div id="divInputPlaca" class="DivInputPesquisa"></div>
+                <div id="divBtnConsultar1" class="divBtnConsultar"></div>
+            </div>
+
+            <div class="areaPesquisas d-flex">
+                <div id="divInputFuncionario" class="DivInputPesquisa"></div>
+                <div id="divBtnConsultar2" class="divBtnConsultar"></div>
+            </div>
+
+            <div class="areaPesquisas d-flex">
+                <div id="divInputData" class="DivInputPesquisa"></div>
+                <div id="divBtnConsultar3" class="divBtnConsultar"></div>
+            </div>
+
         </div>
 
         <div id="divCmpGridRastreamento"></div>
@@ -14,12 +27,13 @@
         padding: 32px;
     }
 
-    #divInputPlaca, #divBtnConsultar {
+    .DivInputPesquisa,
+    .divBtnConsultar {
         display: inline-block;
         vertical-align: top;
     }
 
-    #divBtnConsultar {
+    .divBtnConsultar {
         margin-top: 32px;
         margin-left: 10px;
     }
@@ -28,6 +42,12 @@
         display: inline-block;
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .jumbotron{
+            justify-content: center !important;
+        }
     }
 </style>
 

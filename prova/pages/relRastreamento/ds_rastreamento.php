@@ -1,10 +1,24 @@
 <?php
 
-$where = 'r.vel_registrada > v.vel_maxima';
+$where = 'WHERE r.vel_registrada > v.vel_maxima';
 
-// if(!empty($_REQUEST['placa'])) {
-//     $where = "WHERE v.placa LIKE '%{$_REQUEST['placa']}%'";
-// }
+$filtros = [];
+
+if (!empty($_REQUEST['placa'])) {
+    $filtros[] = "v.placa LIKE '%" . addslashes($_REQUEST['placa']) . "%'";
+}
+
+if (!empty($_REQUEST['funcionario'])) {
+    $filtros[] = "f.nome LIKE '%" . addslashes($_REQUEST['funcionario']) . "%'";
+}
+
+if (!empty($_REQUEST['data'])) {
+    $filtros[] = "DATE(r.data) = '" . addslashes($_REQUEST['data']) . "'";
+}
+
+if (!empty($filtros)) {
+    $where .= ' AND ' . implode(' AND ', $filtros);
+}
 
 $db = new Database();
 
@@ -23,7 +37,7 @@ if($db->connect()) {
         FROM rastreamento r
         INNER JOIN veiculo v ON r.veiculo_id = v.id
         INNER JOIN funcionario f ON r.funcionario_id = f.id
-        WHERE {$where}"
+        {$where}"
     );
 
     echo json_encode(array(
