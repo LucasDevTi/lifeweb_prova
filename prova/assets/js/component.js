@@ -88,12 +88,30 @@ var Cmp = {
             );
         }
 
-        var input = $('<input>', { type: 'text', id: config.id, class: 'form-control' });
+        var input = $('<input>', { 
+            type: config.type || 'text',
+            id: config.id,
+            class: 'form-control',
+            placeholder: config.placeholder || '', 
+            value: config.value || '',
+            min: config.min || '',
+            max: config.max || '' 
+        });
 
         mainEl.append(input);
 
         if(config.renderTo) {
             $(config.renderTo).append(mainEl);
+        }
+        
+        if(config.onlyLetter === true){
+            input.on('input', function () {
+                var value = input.val();
+                var newValue = value.replace(/[^a-zA-Z\s]/g, '');
+                if (value !== newValue) {
+                    input.val(newValue);
+                }
+            });
         }
 
         this.getValue = function() {
@@ -116,7 +134,7 @@ var Cmp = {
             cmp: this
         });
 
-        var table = $('<table>', { id: config.id, class: 'table' });
+        var table = $('<table>', { id: config.id, class: config.class });
 
         var thead = $('<thead>');
         var tbody = $('<tbody>');
@@ -155,10 +173,27 @@ var Cmp = {
 
             data.forEach(function(row) {
                 var rTr = $('<tr>');
+
+                if(config.tipo_table) {
+                    if(config.tipo_table === 'table_rastreamento' && row['diferenca_velocidade']){
+                        if(row['diferenca_velocidade'] >= 50){
+                            rTr.addClass('bg-danger');
+                        }else if(row['diferenca_velocidade'] >= 20){
+                            rTr.addClass('bg-warning');
+                        }
+                    }
+                }
+                
                 config.header.forEach(function(col) {
+                    
+                    let perc = '';
+                    if(col.percentual){
+                        perc = '%';
+                    }
+
                     rTr.append($('<td>', {
                         align: col.align || ''
-                    }).html(row[col.field]));
+                    }).html(`${row[col.field]}${perc}`));
                 });
                 tbody.append(rTr);
             });

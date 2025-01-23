@@ -11,20 +11,23 @@ Cmp.RelRastreamento = function() {
                 width: '200px'
             });
 
-            // Área de pesquisa 2
+            /*  Área de pesquisa 2 */
             Cmp.createInput({
                 id: 'inputFuncionario',
+                placeholder: 'Fulano de tal',
                 renderTo: '#divInputFuncionario',
                 label: 'Funcionário',
-                width: '200px'
+                width: '200px',
+                onlyLetter: true
             });
 
-            // Área de pesquisa 3
+            /*  Área de pesquisa 3 */
             Cmp.createInput({
                 id: 'inputData',
+                type: 'date',
                 renderTo: '#divInputData',
                 label: 'Data do registro',
-                width: '200px'
+                width: '200px',
             });
 
             Cmp.createButton({
@@ -38,7 +41,9 @@ Cmp.RelRastreamento = function() {
 
             Cmp.createGrid({
                 id: 'gridDadosRastreamentos',
+                class: 'table table-striped',
                 renderTo: '#divCmpGridRastreamento',
+                tipo_table: 'table_rastreamento',
                 header: [
                     {
                         text: 'Placa',
@@ -62,7 +67,8 @@ Cmp.RelRastreamento = function() {
                     }, {
                         text: 'Diff. Vel.',
                         field: 'diferenca_velocidade',
-                        width: 150
+                        width: 150,
+                        percentual: true
                     }, {
                         text: 'Latitude',
                         field: 'latitude',
@@ -89,15 +95,7 @@ Cmp.RelRastreamento = function() {
                 success: function(res) {
                     Cmp.hideLoading();
                     if(res.status == 'success') {
-                        const formattedData = $.map(res.data, function(item) {
-                            return {
-                                ...item,
-                                diferenca_velocidade: item.diferenca_velocidade + '%'
-                            };
-                        });
-
-                        console.log(formattedData);
-                        Cmp.get('gridDadosRastreamentos').loadData(formattedData);
+                        Cmp.get('gridDadosRastreamentos').loadData(res.data);
                     } else {
                         Cmp.showErrorMessage(res.message || 'Ocorreu um erro na requisição');
                     }

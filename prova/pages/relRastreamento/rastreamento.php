@@ -1,30 +1,26 @@
 <div class="row">
-    <div class="col-12 ">
+    <div class="col-12">
         <div class="jumbotron col-12 d-flex">
-            <div class="areaPesquisas d-flex">
-                <div id="divInputPlaca" class="DivInputPesquisa"></div>
-                <div id="divBtnConsultar1" class="divBtnConsultar"></div>
-            </div>
 
-            <div class="areaPesquisas d-flex">
-                <div id="divInputFuncionario" class="DivInputPesquisa"></div>
-                <div id="divBtnConsultar2" class="divBtnConsultar"></div>
-            </div>
+            <div id="divInputPlaca" class="DivInputPesquisa"></div>
+            <div id="divBtnConsultar1" class="divBtnConsultar"></div>
+        
+            <div id="divInputFuncionario" class="DivInputPesquisa"></div>
+            <div id="divBtnConsultar2" class="divBtnConsultar"></div>
 
-            <div class="areaPesquisas d-flex">
-                <div id="divInputData" class="DivInputPesquisa"></div>
-                <div id="divBtnConsultar3" class="divBtnConsultar"></div>
-            </div>
+            <div id="divInputData" class="DivInputPesquisa"></div>
+            <div id="divBtnConsultar3" class="divBtnConsultar"></div>
 
         </div>
 
-        <div id="divCmpGridRastreamento"></div>
+        <div id="divCmpGridRastreamento" class="table-responsive"></div>
     </div>
 </div>
 
 <style type="text/css">
     .jumbotron {
         padding: 32px;
+        flex-wrap: wrap;
     }
 
     .DivInputPesquisa,

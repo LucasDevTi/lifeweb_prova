@@ -22,6 +22,7 @@ Cmp.RelVeiculo = function() {
 
             Cmp.createGrid({
                 id: 'gridDadosVeiculos',
+                class: 'table table-striped',
                 renderTo: '#divCmpGridVeiculo',
                 header: [
                     {

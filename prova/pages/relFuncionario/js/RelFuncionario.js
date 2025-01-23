@@ -8,7 +8,9 @@ Cmp.RelFuncionario = function() {
                 id: 'inputNome',
                 renderTo: '#divInputNome',
                 label: 'Nome do funcionário',
-                width: '300px'
+                width: '300px',
+                placeholder:'Digite o nome',
+                onlyLetter: true
             });
 
             Cmp.createButton({
@@ -22,6 +24,7 @@ Cmp.RelFuncionario = function() {
 
             Cmp.createGrid({
                 id: 'gridDadosFuncionario',
+                class: 'table table-striped',
                 renderTo: '#divCmpGridFuncionario',
                 header: [
                     {
