@@ -1,4 +1,4 @@
-Cmp.RelRastreamento = function() {
+Cmp.RelVeiculoacimavelocidade = function() {
     
     var private = {
 
@@ -109,7 +109,7 @@ Cmp.RelRastreamento = function() {
             Cmp.showLoading();
 
             Cmp.request({
-                url: 'index.php?mdl=relRastreamento&file=ds_rastreamento.php',
+                url: 'index.php?mdl=relVeiculoacimavelocidade&file=ds_veiculoacimavelocidade.php',
                 params: {
                     placa: Cmp.get('inputPlaca').getValue(),
                     funcionario: Cmp.get('inputFuncionario').getValue(),

@@ -13,7 +13,7 @@
                 <div class="dropdown-menu" aria-labelledby="menu-relatorios">
                     <a class="dropdown-item" href="index.php?page=relVeiculo"><i class="fa fa-car mr-1 text-danger" aria-hidden="true"></i>Veículos</a>
                     <a class="dropdown-item" href="index.php?page=relFuncionario"><i class="fa fa-users mr-1 text-success" aria-hidden="true"></i>Funcionário</a>
-                    <a class="dropdown-item" href="index.php?page=relRastreamento"><i class="fa fa-bolt mr-1 text-warning" aria-hidden="true"></i>Veículos acima da velocidade</a>
+                    <a class="dropdown-item" href="index.php?page=relVeiculoacimavelocidade"><i class="fa fa-bolt mr-1 text-warning" aria-hidden="true"></i>Veículos acima da velocidade</a>
                 </div>
             </li>
         </ul>

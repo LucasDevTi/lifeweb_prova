@@ -25,9 +25,9 @@
                     JSRequire('relFuncionario', 'RelFuncionario.js');
                     break;
                     
-                case 'relRastreamento':
-                        require('pages/relRastreamento/rastreamento.php');
-                        JSRequire('relRastreamento', 'RelRastreamento.js');
+                case 'relVeiculoacimavelocidade':
+                        require('pages/relVeiculoacimavelocidade/veiculoacimavelocidade.php');
+                        JSRequire('relVeiculoacimavelocidade', 'RelVeiculoacimavelocidade.js');
                         break;
     
             }

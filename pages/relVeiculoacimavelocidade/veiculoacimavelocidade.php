@@ -47,6 +47,6 @@
 
 <script type="text/javascript">
     Cmp.ready(function() {
-        new Cmp.RelRastreamento().init();
+        new Cmp.RelVeiculoacimavelocidade().init();
     });
 </script>
