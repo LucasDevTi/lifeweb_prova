@@ -33,6 +33,7 @@ Cmp.RelVeiculoacimavelocidade = function() {
             Cmp.createInput({
                 id: 'inputData',
                 type: 'text',
+                placeholder: 'Escolha a data',
                 renderTo: '#divInputData',
                 label: 'Data do registro',
                 width: '250px',
