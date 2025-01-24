@@ -26,9 +26,9 @@
                     break;
                     
                 case 'relVeiculoacimavelocidade':
-                        require('pages/relVeiculoacimavelocidade/veiculoacimavelocidade.php');
-                        JSRequire('relVeiculoacimavelocidade', 'RelVeiculoacimavelocidade.js');
-                        break;
+                    require('pages/relVeiculoacimavelocidade/veiculoacimavelocidade.php');
+                    JSRequire('relVeiculoacimavelocidade', 'RelVeiculoacimavelocidade.js');
+                    break;
     
             }
     

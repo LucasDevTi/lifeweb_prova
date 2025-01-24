@@ -1,5 +1,5 @@
 <nav id="header" class="navbar navbar-expand-md navbar-dark mb-4 shadow">
-    <a class="navbar-brand text-white" href="index.php"><img src="/prova/assets/lifeweb.png" alt="Logo" class="img-fluid" style="max-height: 40px;"> LifeWeb</a>
+    <a class="navbar-brand text-white" href="index.php"><img src="/lifeweb_prova/assets/lifeweb.png" alt="Logo" class="img-fluid" style="max-height: 40px;"> LifeWeb</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

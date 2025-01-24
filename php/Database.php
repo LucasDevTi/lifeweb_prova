@@ -15,11 +15,13 @@ class Database
 
     function __construct()
     {
-        $this->ip = 'localhost';
-        // $this->user = 'avaliacao'; 
+        // $this->ip = 'localhost';
+        $this->user = 'avaliacao'; 
+        
         $this->user = 'root';
-        // $this->password = 'root'; 
-        $this->password = '';
+
+        $this->password = 'root'; 
+        // $this->password = '';
         $this->database = 'lifeweb';
     }
 
