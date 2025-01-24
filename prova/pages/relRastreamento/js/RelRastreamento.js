@@ -6,15 +6,17 @@ Cmp.RelRastreamento = function() {
 
             Cmp.createInput({
                 id: 'inputPlaca',
+                placeholder: 'Digite a placa',
                 renderTo: '#divInputPlaca',
                 label: 'Placa do veículo',
-                width: '200px'
+                width: '200px',
+                maxlength: 7
             });
 
             /*  Área de pesquisa 2 */
             Cmp.createInput({
                 id: 'inputFuncionario',
-                placeholder: 'Fulano de tal',
+                placeholder: 'Digite o nome',
                 renderTo: '#divInputFuncionario',
                 label: 'Funcionário',
                 width: '200px',

@@ -8,7 +8,9 @@ Cmp.RelVeiculo = function() {
                 id: 'inputPlaca',
                 renderTo: '#divInputPlaca',
                 label: 'Placa do veículo',
-                width: '200px'
+                width: '200px',
+                placeholder: 'Digite a placa',
+                maxlength: 7
             });
 
             Cmp.createButton({

@@ -11,9 +11,9 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="menu-relatorios" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Relatórios</a>
                 <div class="dropdown-menu" aria-labelledby="menu-relatorios">
-                    <a class="dropdown-item" href="index.php?page=relVeiculo">Veículos</a>
-                    <a class="dropdown-item" href="index.php?page=relFuncionario">Funcionário</a>
-                    <a class="dropdown-item" href="index.php?page=relRastreamento">Veículos acima da velocidade</a>
+                    <a class="dropdown-item" href="index.php?page=relVeiculo"><i class="fa fa-car mr-1" aria-hidden="true"></i>Veículos</a>
+                    <a class="dropdown-item" href="index.php?page=relFuncionario"><i class="fa fa-users mr-1" aria-hidden="true"></i>Funcionário</a>
+                    <a class="dropdown-item" href="index.php?page=relRastreamento"><i class="fa fa-bolt mr-1" aria-hidden="true"></i>Veículos acima da velocidade</a>
                 </div>
             </li>
         </ul>

@@ -51,12 +51,16 @@ var Cmp = {
         }
 
         var type = config.type || 'primary';
+        var icon_class = config.icon_class ? config.icon_class + ' mr-2' : 'fas fa-search mr-2';
 
         var btn = $('<button>', {
             type: 'button',
             class: 'btn btn-' + type
         }).html(config.text || '');
 
+        var icon = $('<i>', { class: icon_class }); 
+        btn.prepend(icon);
+        
         if (typeof config.handler == 'function') {
             btn.click(config.handler);
         }
@@ -95,7 +99,7 @@ var Cmp = {
             placeholder: config.placeholder || '', 
             value: config.value || '',
             min: config.min || '',
-            max: config.max || '' 
+            maxlength: config.maxlength || '' 
         });
 
         mainEl.append(input);
