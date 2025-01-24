@@ -3,10 +3,8 @@
         <div class="jumbotron col-12 d-flex">
 
             <div id="divInputPlaca" class="DivInputPesquisa"></div>
-            <div id="divBtnConsultar1" class="divBtnConsultar"></div>
         
             <div id="divInputFuncionario" class="DivInputPesquisa"></div>
-            <div id="divBtnConsultar2" class="divBtnConsultar"></div>
 
             <div id="divInputData" class="DivInputPesquisa"></div>
             <div id="divBtnConsultar3" class="divBtnConsultar"></div>
@@ -23,13 +21,13 @@
         flex-wrap: wrap;
     }
 
-    .DivInputPesquisa,
-    .divBtnConsultar {
-        display: inline-block;
-        vertical-align: top;
+    .DivInputPesquisa{
+        margin-left: 5px;
     }
 
     .divBtnConsultar {
+        display: inline-block;
+        vertical-align: top;
         margin-top: 32px;
         margin-left: 10px;
     }

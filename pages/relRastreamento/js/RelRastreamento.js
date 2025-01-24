@@ -51,6 +51,17 @@ Cmp.RelRastreamento = function() {
                 }
             });
 
+            Cmp.createButton({
+                id: 'btnLimpar',
+                renderTo: '#divBtnConsultar3',
+                text: 'Limpar',
+                type: 'warning',
+                icon_class: 'fa fa-times',
+                handler: function() {
+                    private.limpar();
+                }
+            });
+
             Cmp.createGrid({
                 id: 'gridDadosRastreamentos',
                 class: 'table table-striped',
@@ -113,6 +124,14 @@ Cmp.RelRastreamento = function() {
                     }
                 }
             });
+        },
+
+        limpar: function(){
+            $('#inputFuncionario').val('');
+            $('#inputPlaca').val('');
+            $('#inputData').data('daterangepicker').setStartDate(moment());
+            $('#inputData').data('daterangepicker').setEndDate(moment());
+            this.buscar();
         }
     };
 

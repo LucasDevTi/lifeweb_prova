@@ -25,6 +25,17 @@ Cmp.RelVeiculo = function() {
                 }
             });
 
+            Cmp.createButton({
+                id: 'btnLimpar',
+                renderTo: '#divBtnConsultar',
+                text: 'Limpar',
+                type: 'warning',
+                icon_class: 'fa fa-times',
+                handler: function() {
+                    private.limpar();
+                }
+            });
+
             Cmp.createGrid({
                 id: 'gridDadosVeiculos',
                 class: 'table table-striped',
@@ -63,8 +74,12 @@ Cmp.RelVeiculo = function() {
                     }
                 }
             });
-        }
+        },
 
+        limpar: function(){
+            $('#inputPlaca').val('');
+            this.buscar();
+        }
     };
 
     this.init = function() {

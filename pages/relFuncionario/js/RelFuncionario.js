@@ -25,6 +25,17 @@ Cmp.RelFuncionario = function() {
                 }
             });
 
+            Cmp.createButton({
+                id: 'btnLimpar',
+                renderTo: '#divBtnConsultar',
+                text: 'Limpar',
+                type: 'warning',
+                icon_class: 'fa fa-times',
+                handler: function() {
+                    private.limpar();
+                }
+            });
+
             Cmp.createGrid({
                 id: 'gridDadosFuncionario',
                 class: 'table table-striped',
@@ -59,6 +70,11 @@ Cmp.RelFuncionario = function() {
                     }
                 }
             });
+        },
+
+        limpar: function(){
+            $('#inputNome').val('');
+            this.buscar();
         }
 
     };

@@ -50,7 +50,7 @@ var Cmp = {
             });
         }
 
-        var type = config.type || 'primary';
+        var type = config.type || 'primary mr-2';
         var icon_class = config.icon_class ? config.icon_class + ' mr-2' : 'fas fa-search mr-2';
 
         var btn = $('<button>', {
