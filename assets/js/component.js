@@ -130,14 +130,14 @@ var Cmp = {
         if(config.daterange === true){
             $(`#${config.id}`).daterangepicker({
                 opens: 'left',
+                autoUpdateInput: false,
+                showDropdowns: true,
                 maxDate: moment(),
                 locale: {
+                    cancelLabel: 'Limpar',
                     format: 'DD/MM/YYYY',
                     separator: ' - ',
                     applyLabel: 'Aplicar',
-                    cancelLabel: 'Cancelar',
-                    fromLabel: 'De',
-                    toLabel: 'Até',
                     customRangeLabel: 'Personalizado',
                     daysOfWeek: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
                     monthNames: [
@@ -146,6 +146,14 @@ var Cmp = {
                     ],
                     firstDay: 0
                 }
+            });
+
+            $(`#${config.id}`).on('apply.daterangepicker', function(ev, picker) {
+                $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+            });
+
+            $(`#${config.id}`).on('cancel.daterangepicker', function(ev, picker) {
+                $(this).val('');
             });
         }
 

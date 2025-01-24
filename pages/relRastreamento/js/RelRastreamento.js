@@ -129,8 +129,7 @@ Cmp.RelRastreamento = function() {
         limpar: function(){
             $('#inputFuncionario').val('');
             $('#inputPlaca').val('');
-            $('#inputData').data('daterangepicker').setStartDate(moment());
-            $('#inputData').data('daterangepicker').setEndDate(moment());
+            $('#inputData').val('');
             this.buscar();
         }
     };
