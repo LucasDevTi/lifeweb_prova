@@ -10,7 +10,10 @@ Cmp.RelVeiculo = function() {
                 label: 'Placa do veículo',
                 width: '200px',
                 placeholder: 'Digite a placa',
-                maxlength: 7
+                maxlength: 7,
+                handler: function() {
+                    private.buscar();
+                }
             });
 
             Cmp.createButton({

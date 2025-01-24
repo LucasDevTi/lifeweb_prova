@@ -10,7 +10,10 @@ Cmp.RelRastreamento = function() {
                 renderTo: '#divInputPlaca',
                 label: 'Placa do veículo',
                 width: '200px',
-                maxlength: 7
+                maxlength: 7,
+                handler: function() {
+                    private.buscar();
+                }
             });
 
             /*  Área de pesquisa 2 */
@@ -20,7 +23,10 @@ Cmp.RelRastreamento = function() {
                 renderTo: '#divInputFuncionario',
                 label: 'Funcionário',
                 width: '200px',
-                onlyLetter: true
+                onlyLetter: true,
+                handler: function() {
+                    private.buscar();
+                }
             });
 
             /*  Área de pesquisa 3 */
@@ -30,6 +36,9 @@ Cmp.RelRastreamento = function() {
                 renderTo: '#divInputData',
                 label: 'Data do registro',
                 width: '200px',
+                handler: function() {
+                    private.buscar();
+                }
             });
 
             Cmp.createButton({
@@ -104,7 +113,6 @@ Cmp.RelRastreamento = function() {
                 }
             });
         }
-
     };
 
     this.init = function() {

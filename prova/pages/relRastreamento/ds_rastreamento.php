@@ -13,7 +13,7 @@ if (!empty($_REQUEST['funcionario'])) {
 }
 
 if (!empty($_REQUEST['data'])) {
-    $filtros[] = "DATE(r.data) = '" . addslashes($_REQUEST['data']) . "'";
+    $filtros[] = "DATE(r.data_ocorrencia) = '" . addslashes($_REQUEST['data']) . "'";
 }
 
 if (!empty($filtros)) {

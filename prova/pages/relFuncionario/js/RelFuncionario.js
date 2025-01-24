@@ -10,7 +10,10 @@ Cmp.RelFuncionario = function() {
                 label: 'Nome do funcionário',
                 width: '300px',
                 placeholder:'Digite o nome',
-                onlyLetter: true
+                onlyLetter: true,
+                handler: function() {
+                    private.buscar();
+                }
             });
 
             Cmp.createButton({

@@ -118,6 +118,16 @@ var Cmp = {
             });
         }
 
+        if(config.handler){
+            input.on('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    if (typeof config.handler === 'function') {
+                        config.handler();
+                    }
+                }
+            });
+        }
+
         this.getValue = function() {
             var val = input.val();
             return val == '' ? null : val;
