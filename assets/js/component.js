@@ -98,7 +98,6 @@ var Cmp = {
             class: 'form-control',
             placeholder: config.placeholder || '', 
             value: config.value || '',
-            min: config.min || '',
             maxlength: config.maxlength || '' 
         });
 
@@ -124,6 +123,28 @@ var Cmp = {
                     if (typeof config.handler === 'function') {
                         config.handler();
                     }
+                }
+            });
+        }
+
+        if(config.daterange === true){
+            $(`#${config.id}`).daterangepicker({
+                opens: 'left',
+                maxDate: moment(),
+                locale: {
+                    format: 'DD/MM/YYYY',
+                    separator: ' - ',
+                    applyLabel: 'Aplicar',
+                    cancelLabel: 'Cancelar',
+                    fromLabel: 'De',
+                    toLabel: 'Até',
+                    customRangeLabel: 'Personalizado',
+                    daysOfWeek: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+                    monthNames: [
+                        'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                        'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+                    ],
+                    firstDay: 0
                 }
             });
         }

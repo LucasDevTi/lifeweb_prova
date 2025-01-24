@@ -29,6 +29,13 @@
         width: 100%;
         margin-bottom: 20px;
     }
+
+    @media (max-width: 503px) {
+        #divBtnConsultar {
+            margin-top: 0px;
+            margin-left: 0;    
+        }
+    }
 </style>
 
 <script type="text/javascript">

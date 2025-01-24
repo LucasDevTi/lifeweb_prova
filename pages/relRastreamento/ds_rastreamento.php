@@ -13,7 +13,16 @@ if (!empty($_REQUEST['funcionario'])) {
 }
 
 if (!empty($_REQUEST['data'])) {
-    $filtros[] = "DATE(r.data_ocorrencia) = '" . addslashes($_REQUEST['data']) . "'";
+    
+    $datas = explode(' - ', $_REQUEST['data']);
+    if (count($datas) == 2) {
+        $data_inicio = DateTime::createFromFormat('d/m/Y', trim($datas[0]))->format('Y-m-d');
+        $data_fim = DateTime::createFromFormat('d/m/Y', trim($datas[1]))->format('Y-m-d');
+        $filtros[] = "DATE(r.data_ocorrencia) BETWEEN '{$data_inicio}' AND '{$data_fim}'";
+    } else {
+        $data = DateTime::createFromFormat('d/m/Y', $_REQUEST['data'])->format('Y-m-d');
+        $filtros[] = "DATE(r.data_ocorrencia) = '{$data}'";
+    }
 }
 
 if (!empty($filtros)) {

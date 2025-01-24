@@ -9,7 +9,7 @@ Cmp.RelRastreamento = function() {
                 placeholder: 'Digite a placa',
                 renderTo: '#divInputPlaca',
                 label: 'Placa do veículo',
-                width: '200px',
+                width: '250px',
                 maxlength: 7,
                 handler: function() {
                     private.buscar();
@@ -22,7 +22,7 @@ Cmp.RelRastreamento = function() {
                 placeholder: 'Digite o nome',
                 renderTo: '#divInputFuncionario',
                 label: 'Funcionário',
-                width: '200px',
+                width: '250px',
                 onlyLetter: true,
                 handler: function() {
                     private.buscar();
@@ -32,10 +32,11 @@ Cmp.RelRastreamento = function() {
             /*  Área de pesquisa 3 */
             Cmp.createInput({
                 id: 'inputData',
-                type: 'date',
+                type: 'text',
                 renderTo: '#divInputData',
                 label: 'Data do registro',
-                width: '200px',
+                width: '250px',
+                daterange: true,
                 handler: function() {
                     private.buscar();
                 }
