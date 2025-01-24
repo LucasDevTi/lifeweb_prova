@@ -8,7 +8,7 @@ var icon_class = config.icon_class ? config.icon_class + ' mr-2' : 'fas fa-searc
 
 - Linha 95~102
 	- Novos atributos  para o  input
-	```js
+```js
 var input = $('<input>', { 
 	type: config.type || 'text',
 	id: config.id,
@@ -21,7 +21,7 @@ var input = $('<input>', {
 
 - Linha 110~118
 	- ``Flag`` personalizada para inputs que aceitam somente letras, por exemplo: nome de funcionário.
-	```js
+```js
 if(config.onlyLetter === true){
 	input.on('input', function () {
 		var value = input.val();
@@ -35,7 +35,7 @@ if(config.onlyLetter === true){
 
 - Linha 120~128
 	- Disponibilizando para os inputs a opção de buscar ao apertar a tecla ``Enter``
-	```js
+```js
 if(config.handler){
 	input.on('keydown', function (e) {
 		if (e.key === 'Enter') {
@@ -49,7 +49,7 @@ if(config.handler){
 
 - Linha 130~158
 	- Configuração para o ``dateragerpicker``
-	```js
+```js
 if(config.daterange === true){
 	$(`#${config.id}`).daterangepicker({
 		opens: 'left',
@@ -89,7 +89,7 @@ var table = $('<table>', { id: config.id, class: config.class });
 
 - Linha 220~228
 	- ``Flag`` especifica para o relatório de veículos acima da velocidade, onde veículos com 50% ou mais de diferença recebem o background vermelho e  20% ou mais recebem amarelo.
-	```js
+```js
 if(config.tipo_table) {
 	if(config.tipo_table === 'table_rastreamento' && row['diferenca_velocidade']){
 		if(row['diferenca_velocidade'] >= 50){
