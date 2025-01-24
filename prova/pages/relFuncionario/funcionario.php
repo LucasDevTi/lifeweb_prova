@@ -5,7 +5,7 @@
             <div id="divBtnConsultar"></div>
         </div>
 
-        <div id="divCmpGridFuncionario"></div>
+        <div id="divCmpGridFuncionario" class="table-responsive"></div>
     </div>
 </div>
 
@@ -18,7 +18,9 @@
         display: inline-block;
         vertical-align: top;
     }
-
+    #divInputNome {
+            width: 300px;
+    }
     #divBtnConsultar {
         margin-top: 32px;
         margin-left: 10px;
@@ -29,6 +31,13 @@
         width: 100%;
         margin-bottom: 20px;
     }
+
+    @media (max-width: 375px) {
+        #divInputNome {
+            width: auto;
+        }
+    }
+
 </style>
 
 <script type="text/javascript">

@@ -5,7 +5,7 @@
             <div id="divBtnConsultar"></div>
         </div>
 
-        <div id="divCmpGridVeiculo"></div>
+        <div id="divCmpGridVeiculo" class="table-responsive"></div>
     </div>
 </div>
 

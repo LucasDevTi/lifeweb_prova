@@ -8,7 +8,7 @@ Cmp.RelFuncionario = function() {
                 id: 'inputNome',
                 renderTo: '#divInputNome',
                 label: 'Nome do funcionário',
-                width: '300px',
+                width: '100%',
                 placeholder:'Digite o nome',
                 onlyLetter: true,
                 handler: function() {
