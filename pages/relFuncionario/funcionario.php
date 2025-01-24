@@ -1,5 +1,5 @@
-<div class="row">
-    <div class="col-12">
+<div class="row shadow bg-white rounded">
+    <div class="col-12 mt-2">
         <div class="jumbotron">
             <div id="divInputNome"></div>
             <div id="divBtnConsultar"></div>
